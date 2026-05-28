@@ -52,4 +52,3 @@ jobs:
           cd ~/devops-pj/api
           docker-compose down
           docker-compose up -d
-cd
