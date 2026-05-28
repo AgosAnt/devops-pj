@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Final - DevOps</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Courier New',monospace;background:#0d1117;color:#e6edf3;min-height:100vh}
+.topbar{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;align-items:center;gap:8px}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
+.url{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:4px 12px;font-size:11px;color:#8b949e;text-align:center}
+.hero{padding:48px 32px 32px;text-align:center;border-bottom:1px solid #21262d}
+.badge{display:inline-block;background:#1f3a1f;color:#3fb950;font-size:10px;padding:3px 10px;border-radius:20px;border:1px solid #3fb950;margin-bottom:16px}
+.hero h1{font-size:32px;font-weight:700;color:#e6edf3;letter-spacing:-0.5px;margin-bottom:8px}
+.hero h1 span{color:#58a6ff}
+.hero p{font-size:13px;color:#8b949e;margin-bottom:24px}
+.btn-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{padding:8px 18px;border-radius:6px;font-size:12px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-primary{background:#238636;color:#fff;border:1px solid #2ea043}
+.btn-secondary{background:transparent;color:#58a6ff;border:1px solid #388bfd}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#21262d}
+.stat{background:#0d1117;padding:20px;text-align:center}
+.stat-num{font-size:22px;font-weight:700}
+.stat-label{font-size:10px;color:#8b949e;margin-top:2px}
+.section{padding:24px 32px}
+.section-title{font-size:11px;color:#8b949e;margin-bottom:12px;text-transform:uppercase;letter-spacing:.08em}
+.endpoint{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;border:1px solid #21262d;margin-bottom:8px;background:#161b22}
+.method{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;min-width:42px;text-align:center}
+.get{background:#1a3a2a;color:#3fb950;border:1px solid #2ea043}
+.post{background:#1a2a3a;color:#58a6ff;border:1px solid #388bfd}
+.path{font-size:12px;flex:1}
+.status-ok{font-size:10px;color:#3fb950}
+.tech-row{display:flex;gap:8px;flex-wrap:wrap;padding:0 32px 24px}
+.tech{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:5px 12px;font-size:11px;color:#8b949e}
+.tech span{color:#e6edf3}
+.terminal{font-size:11px;color:#3fb950;padding:0 32px 16px}
+.footer{padding:16px 32px;border-top:1px solid #21262d;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-text{font-size:10px;color:#8b949e}
+.links{display:flex;gap:12px}
+.link{font-size:11px;color:#58a6ff;text-decoration:none}
+.link:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="dot dot-r"></div>
+  <div class="dot dot-y"></div>
+  <div class="dot dot-g"></div>
+  <div class="url">http://18.204.35.90:8080</div>
+</div>
+
+<div class="hero">
+  <div class="badge">● system online</div>
+  <h1>Proyecto <span>Final</span></h1>
+  <p>// Infraestructura DevOps en la nube · AWS · Docker · CI/CD · Spring Boot</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/api/items">Ver API</a>
+    <a class="btn btn-secondary" href="http://18.204.35.90:3000" target="_blank">Grafana Dashboard</a>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num" style="color:#3fb950">AWS</div>
+    <div class="stat-label">Cloud provider</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Contenedores</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" style="color:#58a6ff">CI/CD</div>
+    <div class="stat-label">GitHub Actions</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" style="color:#3fb950">●</div>
+    <div class="stat-label">Online</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">// endpoints disponibles</div>
+  <div class="endpoint">
+    <div class="method get">GET</div>
+    <div class="path">/api/items/health</div>
+    <div class="status-ok">200 OK</div>
+  </div>
+  <div class="endpoint">
+    <div class="method get">GET</div>
+    <div class="path">/api/items</div>
+    <div class="status-ok">200 OK</div>
+  </div>
+  <div class="endpoint">
+    <div class="method post">POST</div>
+    <div class="path">/api/items</div>
+    <div class="status-ok">201 Created</div>
+  </div>
+</div>
+
+<div class="section-title" style="padding:0 32px 8px">// stack tecnológico</div>
+<div class="tech-row">
+  <div class="tech"><span>Java 17</span> + Spring Boot</div>
+  <div class="tech"><span>Docker</span> + Compose</div>
+  <div class="tech"><span>AWS</span> EC2 + ECR</div>
+  <div class="tech"><span>GitHub Actions</span></div>
+  <div class="tech"><span>Prometheus</span> + Grafana</div>
+  <div class="tech"><span>PostgreSQL</span></div>
+</div>
+
+<div class="terminal">$ docker ps --format "{{.Names}}\t{{.Status}}" | grep Up</div>
+
+<div class="footer">
+  <div class="footer-text">AgosAnt · Universidad · 2026</div>
+  <div class="links">
+    <a class="link" href="https://github.com/AgosAnt/devops-pj" target="_blank">GitHub</a>
+    <a class="link" href="http://18.204.35.90:3000" target="_blank">Grafana</a>
+    <a class="link" href="http://18.204.35.90:9090" target="_blank">Prometheus</a>
+  </div>
+</div>
+</body>
+</html>
